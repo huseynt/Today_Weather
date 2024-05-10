@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/bgweather.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  padding: 0 2%;
+}
+.section-block {
+  max-width: 80%;
+  height: 70vh;
+  background-color: rgba(84, 81, 81, 0.4784313725);
+  backdrop-filter: blur(25px);
+  padding: 70px 40px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.section-block_head {
+  font-size: 2rem;
+  color: #4dff00;
+}
+.section-block_input {
+  width: 100%;
+  height: 37px;
+  border-radius: 7px;
+  border: none;
+  margin-top: 20px;
+  padding: 0 8px;
+  font-size: 1.5rem;
+}
+.section-block_input::placeholder {
+  text-align: center;
+}
+.section-block_input:focus {
+  outline: none;
+}
+.section-block_country {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
+.section-block_mainTemp {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: white;
+}
+.section-block_info {
+  font-size: 1.5rem;
+  color: white;
+}
+.section-block_minMax {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
