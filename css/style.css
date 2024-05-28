@@ -11,8 +11,9 @@
 .section {
   width: 100%;
   height: 100vh;
-  background: url("../assets/bgweather.jpg");
-  background-position: left;
+  background: url("../assets/photo-1714779573259-216b0cf746be.avif");
+  filter: brightness(150%);
+  background-position: 10%;
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
@@ -24,9 +25,9 @@
 .section-block {
   max-width: 90%;
   height: 70vh;
-  background-color: rgba(84, 81, 81, 0.4745098039);
+  background-color: rgba(84, 81, 81, 0.2);
   box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.2745098039);
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(20px);
   padding: 70px 40px;
   margin: 0 auto;
   text-align: center;
@@ -103,10 +104,17 @@
 
 .mekan {
   position: absolute;
-  font-size: 45px;
-  top: -10px;
+  top: 10px;
   right: 25px;
+}
+.mekan_dot {
+  font-size: 10px;
   animation: fade ease-in-out 2s infinite;
+  height: 5px;
+}
+.mekan_info {
+  font-size: 10px;
+  color: white;
 }
 
 @keyframes fade {

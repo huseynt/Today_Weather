@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--android mobile browser theme -->
+    <meta name="theme-color" content="#0176e4" />
+    <meta content="#0176e4" name="msapplication-navbutton-color"/>
+    <!-- ios mobile safari browser theme -->
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="#0176e4-translucent" name="apple-mobile-web-app-status-bar-style"/>
+    <!-- style -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- script -->
     <script defer src="./JS/main.js"></script>
 </head>
 <body>
@@ -14,7 +22,7 @@
 
         <div class="section-block">
             <h2 class="section-block_head">Today Weather</h2>
-            <input class="section-block_input" type="text" id="searchWeather" placeholder="Write City (Press Enter)">
+            <input class="section-block_input" type="text" id="searchWeather" placeholder="Məkan (Press Enter)">
             <div class="section-block_country">
                 <div class="section-block_country-icon"><img src="./assets/location.png" alt="location"></div>
                 <p class="section-block_country-city" id="city"></p>
@@ -26,7 +34,10 @@
             <p class="section-block_speed" id="speed"></p>
 
             <a class="github" href="https://github.com/huseynt">github/huseynt</a>
-            <p class="mekan">.</p>
+            <p class="mekan">
+                <span class="mekan_info" id="mekanInfo"></span>
+                <span class="mekan_dot" id="mekanDot">●</span>
+            </p>
         </div>
 
 

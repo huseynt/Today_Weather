@@ -5,7 +5,6 @@ var city = "baku"
 async function fetchWeather (city) {
     const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric&lang=az`)
     const weatherData = await data.json()
-    console.log(weatherData)
 
     const handleDesc = ()=> {
         return weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1)
@@ -29,16 +28,16 @@ searchWeather.addEventListener("keyup", function (e){
 fetchWeather(city)
 
 
-
-
-
-
 function findGeo(position) {
     async function fetchCity(lat,long) {
         const data = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`)
         const obj = await data.json()
         const city = obj.locality.split(" ")[0]
         fetchWeather(city)
+
+        if(city) {
+            document.querySelector("#mekanInfo").innerText="mekan tapıldı"
+        }
     }
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -46,7 +45,9 @@ function findGeo(position) {
 }
 
 function errorCallback(error) {
-    alert("Lokasiya məlumatlarının alınmasına icazə verin");
+    alert("Lokasiya məlumatlarının alınmasına icazə verin !");
+    document.querySelector("#mekanInfo").innerText="mekan taplmadı";
+    document.querySelector("#mekanDot").style.display="none"
 };
 
 navigator.geolocation.getCurrentPosition(findGeo,errorCallback);
