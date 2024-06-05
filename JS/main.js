@@ -9,12 +9,14 @@ async function fetchWeather (city) {
     const handleDesc = ()=> {
         return weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1)
     }
+    console.log(weatherData)
+
     document.querySelector("#city").innerText=weatherData.name
-    const mainTemp = document.querySelector("#mainTemp").innerText=`${weatherData.main.temp}℃`
-    const info = document.querySelector("#info").innerText=handleDesc()
-    const minMax = document.querySelector("#minMax").innerText=`Min: ${weatherData.main.temp_min}℃ / Max: ${weatherData.main.temp_max}℃`
-    const humidity = document.querySelector("#humidity").innerText=`Nisbi rütubət: ${weatherData.main.humidity}%`
-    const speed = document.querySelector("#speed").innerText=`
+    document.querySelector("#mainTemp").innerText=`${weatherData.main.temp}℃`
+    document.querySelector("#info").innerText=handleDesc()
+    document.querySelector("#minMax").innerText=`Min: ${weatherData.main.temp_min}℃ / Max: ${weatherData.main.temp_max}℃`
+    document.querySelector("#humidity").innerText=`Nisbi rütubət: ${weatherData.main.humidity}%`
+    document.querySelector("#speed").innerText=`
     Külək sürəti: ${weatherData.wind.speed ? weatherData.wind.speed : "-- "}m/s
     Külək istiqaməti: ${weatherData.wind.deg ? weatherData.wind.deg : "-- "}°
     Atmosfer təzyiqi: ${weatherData.main.pressure ? weatherData.main.pressure : "-- "}hPa`
